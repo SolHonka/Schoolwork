@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sorting Hat Program</title>
+  </head>
+  <body>
+    <script>
+      let name = prompt("What is your name?");
+      let houseNumber = Math.floor(Math.random() * 4) + 1;
+      let house;
+
+      switch (houseNumber) {
+        case 1:
+          house = "Gryffindor";
+          break;
+        case 2:
+          house = "Slytherin";
+          break;
+        case 3:
+          house = "Hufflepuff";
+          break;
+        case 4:
+          house = "Ravenclaw";
+          break;
+      }
+
+      document.write(name + ", you are " + house + ".");
+    </script>
+  </body>
+</html>
