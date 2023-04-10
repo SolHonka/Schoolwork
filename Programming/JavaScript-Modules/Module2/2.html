@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>List of Participants</title>
+  </head>
+  <body>
+    <h1>List of Participants</h1>
+    <label>Number of participants:</label>
+    <input type="number" id="numParticipants">
+    <button onclick="getNames()">Enter</button>
+    <ul id="namesList"></ul>
+    <script>
+      function getNames() {
+        const numParticipants = document.getElementById("numParticipants").value;
+        const names = [];
+        for (let i = 0; i < numParticipants; i++) {
+          const name = prompt(`Enter name of participant #${i+1}:`);
+          names.push(name);
+        }
+        names.sort();
+        displayNames(names);
+      }
+      function displayNames(names) {
+        const list = document.getElementById("namesList");
+        for (let name of names) {
+          const listItem = document.createElement("li");
+          listItem.textContent = name;
+          list.appendChild(listItem);
+        }
+      }
+    </script>
+  </body>
+</html>
